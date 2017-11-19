@@ -19,4 +19,9 @@ public class SceneManager : MonoBehaviour
     {
         m_go.SetActive(true);
     }
+
+    private void OnDestroy()
+    {
+        EventKicker.Kick -= EventHandler;
+    }
 }
